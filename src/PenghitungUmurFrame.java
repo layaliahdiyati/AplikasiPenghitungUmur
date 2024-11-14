@@ -20,6 +20,8 @@ private Thread peristiwaThread;
      * Creates new form PenghitungUmurFrame
      */
     public PenghitungUmurFrame() {
+        setTitle("APLIKASI PENGHITUNG UMUR");
+        
         initComponents();
         helper = new PenghitungUmurHelper();
     }
@@ -43,13 +45,17 @@ private Thread peristiwaThread;
         dateChooserTanggalLahir = new com.toedter.calendar.JDateChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaPeristiwa = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel1.setText("Pilih Tanggal Lahir");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel2.setText("Umur Anda");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel3.setText("Hari Ulang Tahun Berikutnya");
 
         txtUmur.addActionListener(new java.awt.event.ActionListener() {
@@ -58,6 +64,7 @@ private Thread peristiwaThread;
             }
         });
 
+        btnHitung.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         btnHitung.setText("Hitung Umur");
         btnHitung.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +72,7 @@ private Thread peristiwaThread;
             }
         });
 
+        btnKeluar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         btnKeluar.setText("Keluar");
         btnKeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +90,9 @@ private Thread peristiwaThread;
         txtAreaPeristiwa.setRows(20);
         jScrollPane1.setViewportView(txtAreaPeristiwa);
 
+        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel4.setText("APLIKASI PENGHITUNG UMUR");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,23 +106,27 @@ private Thread peristiwaThread;
                             .addComponent(jLabel1)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2))
-                        .addGap(85, 85, 85)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtUmur)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(dateChooserTanggalLahir, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dateChooserTanggalLahir, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnHitung)
-                                .addGap(26, 26, 26)
-                                .addComponent(btnKeluar))
-                            .addComponent(txtHariUlangTahunBerikutnya)
-                            .addComponent(txtUmur))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnKeluar, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE))
+                            .addComponent(txtHariUlangTahunBerikutnya)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(264, 264, 264)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(6, 6, 6)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
@@ -128,7 +143,7 @@ private Thread peristiwaThread;
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -243,6 +258,7 @@ txtAreaPeristiwa.setText("");        // TODO add your handling code here:
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txtAreaPeristiwa;
     private javax.swing.JTextField txtHariUlangTahunBerikutnya;
